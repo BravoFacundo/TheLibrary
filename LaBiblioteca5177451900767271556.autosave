@@ -1,4 +1,4 @@
-PFont font; //hola julia como estas?
+PFont font; 
 PImage logoBiblioteca;
 
 //----- Processing Mapping Library
@@ -119,13 +119,13 @@ void draw() {
     }
 
     p1.beginDraw(); //aca se dibuja dentro de los pgraphic
-    //background(232, 223, 176);
-    p1.blend(video.getFrame(), 0, 0, width/2, height, 0, 0, width/2, height, BLEND);
+    background(232, 223, 176);
+    p1.blend(video.getFrame(), 0, 0, width/2, height, 0, 0, width/2, height, DARKEST);
     drawText(); 
     p1.endDraw();
 
     p2.beginDraw();
-    //background(232, 223, 176);
+    background(232, 223, 176);
     p2.blend(video.getFrame(), 0, 0, width/2, height, 0, 0, width/2, height, DARKEST);
     drawText(); 
     if (modo ==1)    p2.image (logoBiblioteca, p2.width/2, p2.height- p2.height/6);

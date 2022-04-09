@@ -1,8 +1,8 @@
 void drawText() {
   p1.fill(1); //textAlign(CENTER);
   p1.textSize(50);
-  p1.textFont(mono);
-  p2.textFont(mono);
+  p1.textFont(font);
+  p2.textFont(font);
   p2.fill(1); //textAlign(CENTER);
   p2.textSize(50);
   p2.imageMode (CENTER);
