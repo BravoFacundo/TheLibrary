@@ -2,7 +2,7 @@
 
 Mapping projection of a writing input system. Made with Processing, Java.
 
-**Technologies**
+# Technologies
 
 Developed using:
 - Java Language
