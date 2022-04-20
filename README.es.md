@@ -2,7 +2,7 @@
 
 Proyección Mapping de un Sistema de escritura. Hecho en Processing, Java.
 
-If you prefer, you can read this in [English](README.md)
+*If you prefer, you can read this in [English](README.md)*
 
 # Tecnologías
 
