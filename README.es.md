@@ -30,7 +30,7 @@ El video avanza o retrocede su reproducción dependiendo de la interacción del 
 # Créditos y links
 
 Los videos e imágenes utilizados fueron proporcionados por colaboradores encargados de otras áreas de realización del proyecto.
-- La tipografía utilizada es “The Queen” (https://www.dafont.com/the-queen.font)
+- La tipografía utilizada es [“The Queen”](https://www.dafont.com/the-queen.font)
 
 # Cambios realizados
 
