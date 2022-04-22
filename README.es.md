@@ -27,6 +27,13 @@ Los usuarios reciben feedback visual de su interacción como si de una pantalla 
 Se implementó la Librería de video para reproducir en la superficie del libro un video de llamas que simulan que la superficie se está quemando.
 El video avanza o retrocede su reproducción dependiendo de la interacción del usuario.
 
+# Galería de imágenes
+
+![1](https://user-images.githubusercontent.com/88951560/164584537-4db500d9-a19a-48a7-be85-a2b25fafaa91.png)
+![2](https://user-images.githubusercontent.com/88951560/164584543-10128e0a-2071-4273-901b-89e135e2aad3.png)
+![3](https://user-images.githubusercontent.com/88951560/164584549-67f94bee-4cbb-44bb-a8ec-80feddd4f9d0.png)
+![4](https://user-images.githubusercontent.com/88951560/164584552-d75d5ed2-5ee9-4097-8b11-052c846b24ea.png)
+
 # Créditos y links
 
 Los videos e imágenes utilizados fueron proporcionados por colaboradores encargados de otras áreas de realización del proyecto.
