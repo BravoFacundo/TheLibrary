@@ -27,6 +27,13 @@ Users receive visual feedback from their interaction on the book as if it were a
 The Video Library has been implemented to play a video of flames on the surface of the book, simulating that the surface is burning.
 The video advances or rewinds its playback depending on the user's interaction.
 
+# Image gallery
+
+![1](https://user-images.githubusercontent.com/88951560/164584537-4db500d9-a19a-48a7-be85-a2b25fafaa91.png)
+![2](https://user-images.githubusercontent.com/88951560/164584543-10128e0a-2071-4273-901b-89e135e2aad3.png)
+![3](https://user-images.githubusercontent.com/88951560/164584549-67f94bee-4cbb-44bb-a8ec-80feddd4f9d0.png)
+![4](https://user-images.githubusercontent.com/88951560/164584552-d75d5ed2-5ee9-4097-8b11-052c846b24ea.png)
+
 # Links and credits
 
 The videos and images used were provided by collaborators in charge of other areas of the project.
