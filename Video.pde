@@ -29,21 +29,21 @@ class VideoFrames {
     if (update && initialize)
     {
       currentFrame += speed;
-      currentFrame = constrain(currentFrame, 0.1, cantFrames-1); //println(frameActual, " ", velocidad);
+      currentFrame = constrain(currentFrame, 0.1, cantFrames-1);
     } else if (!initialize)
     {
-      //si no estas en el ultimo frame
-      if (video.duration() - video.time() > 0.1) {
-        if (video.available()) {
+      if (video.duration() - video.time() > 0.1) 
+      {
+        if (video.available()) 
+        {
           video.read();
           PImage img = video.copy();
           image(img, 0, 0);
-          img.resize(640, 480); // resolución
-          //---- agregar cualquier proceso que la imagen necesite
+          img.resize(640, 480);
           imgs.add(img);
-          //println(imgs.size());
         }
-      } else {
+      } else 
+      {
         initialize = true;
         cantFrames = imgs.size();
       }
