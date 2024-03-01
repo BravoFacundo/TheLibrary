@@ -1,8 +1,8 @@
+*Este readme está escrito en INGLÉS. Si lo prefieres, puedes leerlo en [español](README.es.md).*
+
 # The Library
 
 Mapping projection of a writing input system. Made with Processing, Java.
-
-*Si lo prefieres, puedes leer esto en [español](README.es.md)*
 
 # Technologies
 
