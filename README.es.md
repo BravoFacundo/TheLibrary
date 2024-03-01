@@ -4,7 +4,7 @@
 
 Proyección Mapping de un Sistema de escritura. Hecho en Processing, Java.
 
-# Tecnologías
+## Tecnologías
 
 Desarrollado utilizando:
 - Lenguaje Java
@@ -12,7 +12,7 @@ Desarrollado utilizando:
 - Librería de mapping Keystone (David Bouchard)
 - Librería de Video para Processing 3 (The Processing Foundation)
 
-# Idea y desarrollo
+## Idea y desarrollo
 
 Esta experiencia interactiva está diseñada para su uso individual en varias iteraciones.
 Cada usuario que interactúa tipea sobre un teclado y recibe feedback visual sobre la superficie mapeada de un libro.
@@ -27,14 +27,15 @@ Los usuarios reciben feedback visual de su interacción como si de una pantalla 
 Se implementó la Librería de video para reproducir en la superficie del libro un video de llamas que simulan que la superficie se está quemando.
 El video avanza o retrocede su reproducción dependiendo de la interacción del usuario.
 
-# Galería de imágenes
+## Galería de imágenes
 
-![1](https://user-images.githubusercontent.com/88951560/164584537-4db500d9-a19a-48a7-be85-a2b25fafaa91.png)
-![2](https://user-images.githubusercontent.com/88951560/164584543-10128e0a-2071-4273-901b-89e135e2aad3.png)
-![3](https://user-images.githubusercontent.com/88951560/164584549-67f94bee-4cbb-44bb-a8ec-80feddd4f9d0.png)
-![4](https://user-images.githubusercontent.com/88951560/164584552-d75d5ed2-5ee9-4097-8b11-052c846b24ea.png)
+![Github_TheLibrary_01](https://github.com/BravoFacundo/TheLibrary/assets/88951560/bf6978e3-4a12-47bd-8e74-8cbcfd8fb2dc)
+![Github_TheLibrary_02](https://github.com/BravoFacundo/TheLibrary/assets/88951560/ceef9800-901e-4a1a-b396-098cfd41d760)
+![Github_TheLibrary_03](https://github.com/BravoFacundo/TheLibrary/assets/88951560/e25fe63b-4637-42a4-aa95-ce8334abdd05)
+![Github_TheLibrary_04](https://github.com/BravoFacundo/TheLibrary/assets/88951560/32c31f19-26cf-4362-8d38-69630460f6a1)
+![Github_TheLibrary_05](https://github.com/BravoFacundo/TheLibrary/assets/88951560/2ffdd16e-815a-4bb1-af09-b84d96a9e798)
 
-# Créditos y links
+## Créditos y links
 
 Los videos e imágenes utilizados fueron proporcionados por colaboradores encargados de otras áreas de realización del proyecto.
 - La tipografía utilizada es [“The Queen”](https://www.dafont.com/the-queen.font)
