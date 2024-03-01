@@ -19,7 +19,7 @@ Cada usuario que interactúa tipea sobre un teclado y recibe feedback visual sob
 El libro simula estar quemándose y la interacción del usuario le permite revertirlo.
 Al finalizar, el sistema hace una copia de lo escrito y se reinicia para recibir al próximo usuario.
 
-# Implementación
+## Implementación
 
 Se implementó la Librería de mapping para realizar una proyección sobre la superficie de un libro.
 Los usuarios reciben feedback visual de su interacción como si de una pantalla se tratase.
