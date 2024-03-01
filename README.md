@@ -40,7 +40,7 @@ The video advances or rewinds its playback depending on the user's interaction.
 The videos and images used were provided by collaborators in charge of other areas of the project.
 - The font used is ["The Queen"](https://www.dafont.com/the-queen.font)
 
-# Change log
+## Change log
 
 - Added comments and tabs. 
 - Improved variable naming and hierarchy.
