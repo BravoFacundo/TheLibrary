@@ -1,0 +1,37 @@
+@font-face {
+  font-family: "The Queen";
+  src: url("data/TheQueen.ttf");
+}
+
+html, body {
+  margin: 0;
+  height: 100%;
+  background: #000;
+  overflow: hidden;
+}
+
+#game {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+canvas {
+  display: block;
+}
+
+#p5_loading {
+  animation: blink 1.2s ease-in-out infinite alternate;
+}
+
+#loadingLogo {
+  display: block;
+  width: min(420px, 60vw);
+  filter: brightness(0) invert(1);
+}
+
+@keyframes blink {
+  from { opacity: 1; }
+  to { opacity: 0.35; }
+}

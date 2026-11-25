@@ -1,8 +1,16 @@
 *Este readme está escrito en INGLÉS. Si lo prefieres, puedes leerlo en [español](README.es.md).*
 
+![The Library](Gallery/TheLibrary_Banner_EN.png)
+
 # The Library
 
 Mapping projection of a writing input system. Made with Processing, Java.
+
+## Repository structure
+
+- [`TheLibrary_Processing`](TheLibrary_Processing) — original installation sketch (Processing 3.5.4), with its videos and logo in `data/`.
+- [`TheLibrary_p5js`](TheLibrary_p5js) — browser version in p5.js (work in progress), with the same logic as the original: two pages like an open book, without mapping.
+- [`Gallery`](Gallery) — photographic record of the exhibition, including the photos shown below.
 
 ## Technologies
 
@@ -11,6 +19,16 @@ Developed using:
 - Processing 3.5.4
 - Keystone Mapping Library (David Bouchard)
 - Video Library for Processing 3 (The Processing Foundation)
+
+## How to run the Processing version
+
+1. Install [Processing](https://processing.org/download) (tested with 4.5; originally made with 3.5.4).
+2. Install **Video Library for Processing 4** (The Processing Foundation) from *Sketch → Import Library → Manage Libraries…*.
+3. Install **Keystone** (David Bouchard) manually: download it from [keystonep5.sourceforge.net](https://keystonep5.sourceforge.net/) and unzip the `keystone` folder into `Documents/Processing/libraries`.
+4. Optional: download the font [The Queen](https://fontbundles.net/free-fonts/the-queen) and put `TheQueen.ttf` in `TheLibrary_Processing/data/`. Without it, Georgia is used.
+5. Open `TheLibrary_Processing/TheLibrary_Processing.pde` and press Run.
+
+Projection calibration keys: `*` toggles calibration, `+` saves it to `keystone.xml`, `-` loads it.
 
 ## Idea and development
 
@@ -29,16 +47,15 @@ The video advances or rewinds its playback depending on the user's interaction.
 
 ## Image gallery
 
-![Github_TheLibrary_01](https://github.com/BravoFacundo/TheLibrary/assets/88951560/bf6978e3-4a12-47bd-8e74-8cbcfd8fb2dc)
-![Github_TheLibrary_02](https://github.com/BravoFacundo/TheLibrary/assets/88951560/ceef9800-901e-4a1a-b396-098cfd41d760)
-![Github_TheLibrary_03](https://github.com/BravoFacundo/TheLibrary/assets/88951560/e25fe63b-4637-42a4-aa95-ce8334abdd05)
-![Github_TheLibrary_04](https://github.com/BravoFacundo/TheLibrary/assets/88951560/32c31f19-26cf-4362-8d38-69630460f6a1)
-![Github_TheLibrary_05](https://github.com/BravoFacundo/TheLibrary/assets/88951560/2ffdd16e-815a-4bb1-af09-b84d96a9e798)
+![The book waiting for the next user](Gallery/TheLibrary_01_Book.png)
+![A user writing on the projected pages](Gallery/TheLibrary_02_Writing.png)
+![The book burning](Gallery/TheLibrary_03_Burning.png)
+![The book burning](Gallery/TheLibrary_04_Burning.png)
 
 ## Links and credits
 
 The videos and images used were provided by collaborators in charge of other areas of the project.
-- The font used is ["The Queen"](https://www.dafont.com/the-queen.font)
+- The font used is ["The Queen"](https://fontbundles.net/free-fonts/the-queen) by Font Bundles, free for personal and commercial use. Its license does not allow sharing the font file, so it is not included in this repository.
 
 ## Change log
 

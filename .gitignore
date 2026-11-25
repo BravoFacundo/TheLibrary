@@ -7,3 +7,6 @@ application.linux64
 application.windows32
 application.windows64
 application.macosx
+
+# The Queen font: its license does not allow sharing the font file
+TheQueen.ttf

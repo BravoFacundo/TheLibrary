@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The Library</title>
+  <link rel="icon" href="data/Logo_ES.png">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/p5@1.11.13/lib/p5.min.js"></script>
+  <script src="video.js"></script>
+  <script src="book.js"></script>
+  <script src="library.js"></script>
+  <script src="functions.js"></script>
+  <script src="inputs.js"></script>
+  <script src="sketch.js"></script>
+</head>
+<body>
+  <main id="game">
+    <div id="p5_loading"><img id="loadingLogo" alt="The Library"></div>
+    <script>
+      // Pick the logo for the current language (lang is set in sketch.js)
+      document.getElementById("loadingLogo").src = "data/Logo_" + lang.toUpperCase() + ".png";
+    </script>
+  </main>
+</body>
+</html>
