@@ -8,11 +8,21 @@ A book is burning, and only writing can save it. An interactive writing piece pl
 
 It was originally an interactive projection mapping installation, made with Processing (Java).
 
+You can play the game on my [itch.io](https://facundo-bravo.itch.io/the-library).
+
 ## Repository structure
 
 - [`TheLibrary_p5js`](TheLibrary_p5js) — browser version in p5.js, with the same logic as the installation: two pages like an open book, without mapping. Its README explains how to play and run it.
 - [`TheLibrary_Processing`](TheLibrary_Processing) — original installation sketch in Processing, with its videos and logo in `data/`.
 - [`Gallery`](Gallery) — photographic record of the exhibition.
+
+## Controls
+
+- Keyboard: write on the book. `Backspace` deletes, `Enter` starts a new line.
+- `Enter`: confirm your signature when the book is saved.
+- Mouse: open the saved pages, read them and change the language.
+- Arrows: move between tables of saved pages.
+- `Esc` (optional): skip the signature, close a page or go back to the book.
 
 ## Idea and development
 
@@ -66,7 +76,7 @@ More photos in the [gallery](Gallery).
 ## Links and credits
 
 The videos and images used were provided by collaborators in charge of other areas of the project.
-- The font used is ["The Queen"](https://fontbundles.net/free-fonts/regular-fonts/the-queen) by Font Bundles, under its Premium License. The license allows using it as a web font but not sharing the font file, so it is not included in this repository.
+- The font used is ["The Queen"](https://fontbundles.net/free-fonts/regular-fonts/the-queen) by Font Bundles, under its Premium License. It is included so the game runs as published; the font is not covered by this repository and keeps its own license.
 
 ## Change log
 

@@ -36,4 +36,4 @@ Language follows the browser (Spanish or English). Force it with `?lang=es` or `
 
 ## Credits
 
-The videos and images were provided by collaborators in charge of other areas of the project. Font: ["The Queen"](https://fontbundles.net/free-fonts/the-queen) by Font Bundles. Its license does not allow sharing the font file, so it is not in the repository: download it and put `TheQueen.ttf` in `data/`. Without it, the game uses Georgia.
+The videos and images were provided by collaborators in charge of other areas of the project. Font: ["The Queen"](https://fontbundles.net/free-fonts/regular-fonts/the-queen) by Font Bundles, under its Premium License; it keeps its own license.

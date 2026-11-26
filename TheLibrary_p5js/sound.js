@@ -32,6 +32,13 @@ function loadSounds() {
   masterGain = audio.createGain();
   masterGain.connect(audio.destination);
 
+  // Some pages already allow sound (e.g. an iframe with allow="autoplay"
+  // after a click on the site), so try right away
+  audio.onstatechange = () => {
+    if (audio.state == "running") startFire();
+  };
+  audio.resume().catch(() => {});
+
   for (let name in soundFiles) {
     fetch("data/sound/" + soundFiles[name])
       .then(r => r.arrayBuffer())

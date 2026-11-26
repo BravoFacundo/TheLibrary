@@ -8,11 +8,21 @@ Un libro se está quemando y solo escribiendo se lo puede salvar. Una pieza inte
 
 Originalmente fue una instalación interactiva de proyección mapping, hecha en Processing (Java).
 
+Podés jugarlo en mi [itch.io](https://facundo-bravo.itch.io/the-library).
+
 ## Estructura del repositorio
 
 - [`TheLibrary_p5js`](TheLibrary_p5js) — versión para navegador en p5.js, con la misma lógica que la instalación: dos páginas como un libro abierto, sin mapping. Su README explica cómo jugarla y correrla.
 - [`TheLibrary_Processing`](TheLibrary_Processing) — sketch original de la instalación en Processing, con sus videos y logo en `data/`.
 - [`Gallery`](Gallery) — registro fotográfico de la muestra.
+
+## Controles
+
+- Teclado: escribir en el libro. `Backspace` borra, `Enter` pasa de renglón.
+- `Enter`: confirmar la firma cuando el libro está a salvo.
+- Mouse: abrir las páginas guardadas, leerlas y cambiar el idioma.
+- Flechas: moverse entre las mesas de páginas guardadas.
+- `Esc` (opcional): saltear la firma, cerrar una página o volver al libro.
 
 ## Idea y desarrollo
 
@@ -66,7 +76,7 @@ Más fotos en la [galería](Gallery).
 ## Créditos y links
 
 Los videos e imágenes utilizados fueron proporcionados por colaboradores encargados de otras áreas de realización del proyecto.
-- La tipografía utilizada es [“The Queen”](https://fontbundles.net/free-fonts/regular-fonts/the-queen) de Font Bundles, con su licencia Premium. La licencia permite usarla como web font pero no compartir el archivo de la fuente, por eso no está incluida en este repositorio.
+- La tipografía utilizada es [“The Queen”](https://fontbundles.net/free-fonts/regular-fonts/the-queen) de Font Bundles, con su licencia Premium. Está incluida para que el juego funcione tal como se publicó; la fuente no forma parte de la licencia de este repositorio y mantiene la suya.
 
 ## Cambios realizados
 
