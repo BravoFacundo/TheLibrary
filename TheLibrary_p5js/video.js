@@ -12,7 +12,8 @@ class VideoFrames {
     this.rewindSpeed = 0.5;
 
     this.sheet = loadImage(path);
-    this.glowSheet = loadImage(glowPath);
+    this.glowPath = glowPath;
+    this.glowSheet = null;
   }
 
   createMask() {
@@ -56,7 +57,13 @@ class VideoFrames {
     this.drawFrame(this.sheet, x, y, w, h, pg);
   }
 
+  // The glow loads after the game starts, so the book appears sooner
+  loadGlow() {
+    loadImage(this.glowPath, img => this.glowSheet = img);
+  }
+
   drawGlow(pg, x, y, w, h) {
+    if (!this.glowSheet) return;
     this.drawFrame(this.glowSheet, x, y, w, h, pg);
   }
 

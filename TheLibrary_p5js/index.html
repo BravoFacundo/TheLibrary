@@ -12,15 +12,13 @@
   <script src="library.js"></script>
   <script src="functions.js"></script>
   <script src="inputs.js"></script>
+  <script src="ui.js"></script>
+  <script src="sound.js"></script>
   <script src="sketch.js"></script>
 </head>
 <body>
   <main id="game">
-    <div id="p5_loading"><img id="loadingLogo" alt="The Library"></div>
-    <script>
-      // Pick the logo for the current language (lang is set in sketch.js)
-      document.getElementById("loadingLogo").src = "data/Logo_" + lang.toUpperCase() + ".png";
-    </script>
+    <div id="p5_loading"></div>
   </main>
 </body>
 </html>

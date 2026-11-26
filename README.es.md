@@ -4,46 +4,43 @@
 
 # La Biblioteca
 
-Proyección Mapping de un Sistema de escritura. Hecho en Processing, Java.
+Un libro se está quemando y solo escribiendo se lo puede salvar. Una pieza interactiva de escritura que se juega en el navegador, hecha en p5.js (JavaScript).
+
+Originalmente fue una instalación interactiva de proyección mapping, hecha en Processing (Java).
 
 ## Estructura del repositorio
 
-- [`TheLibrary_Processing`](TheLibrary_Processing) — sketch original de la instalación (Processing 3.5.4), con sus videos y logo en `data/`.
-- [`TheLibrary_p5js`](TheLibrary_p5js) — versión para navegador en p5.js (en desarrollo), con la misma lógica que la original: dos páginas como un libro abierto, sin mapping.
-- [`Gallery`](Gallery) — registro fotográfico de la muestra, incluidas las fotos de abajo.
-
-## Tecnologías
-
-Desarrollado utilizando:
-- Lenguaje Java
-- Processing 3.5.4
-- Librería de mapping Keystone (David Bouchard)
-- Librería de Video para Processing 3 (The Processing Foundation)
-
-## Cómo correr la versión de Processing
-
-1. Instalar [Processing](https://processing.org/download) (probado con 4.5; hecho originalmente con 3.5.4).
-2. Instalar **Video Library for Processing 4** (The Processing Foundation) desde *Sketch → Importar biblioteca → Gestionar bibliotecas…*.
-3. Instalar **Keystone** (David Bouchard) a mano: descargarla de [keystonep5.sourceforge.net](https://keystonep5.sourceforge.net/) y descomprimir la carpeta `keystone` en `Documentos/Processing/libraries`.
-4. Opcional: descargar la tipografía [The Queen](https://fontbundles.net/free-fonts/the-queen) y poner `TheQueen.ttf` en `TheLibrary_Processing/data/`. Sin ella se usa Georgia.
-5. Abrir `TheLibrary_Processing/TheLibrary_Processing.pde` y apretar Run.
-
-Teclas de calibración de la proyección: `*` activa/desactiva la calibración, `+` la guarda en `keystone.xml`, `-` la carga.
+- [`TheLibrary_p5js`](TheLibrary_p5js) — versión para navegador en p5.js, con la misma lógica que la instalación: dos páginas como un libro abierto, sin mapping. Su README explica cómo jugarla y correrla.
+- [`TheLibrary_Processing`](TheLibrary_Processing) — sketch original de la instalación en Processing, con sus videos y logo en `data/`.
+- [`Gallery`](Gallery) — registro fotográfico de la muestra.
 
 ## Idea y desarrollo
 
 Esta experiencia interactiva está diseñada para su uso individual en varias iteraciones.
-Cada usuario que interactúa tipea sobre un teclado y recibe feedback visual sobre la superficie mapeada de un libro.
+Cada usuario tipea sobre un teclado y ve aparecer el texto en las páginas de un libro.
 El libro simula estar quemándose y la interacción del usuario le permite revertirlo.
-Al finalizar, el sistema hace una copia de lo escrito y se reinicia para recibir al próximo usuario.
+Al finalizar, el sistema guarda una copia de lo escrito y se reinicia para recibir al próximo usuario.
+
+En la instalación, la imagen se proyectaba sobre un libro real, sin contexto: la gente entraba a una sala oscura y encontraba el libro ya quemándose.
 
 ## Implementación
 
-Se implementó la Librería de mapping para realizar una proyección sobre la superficie de un libro.
-Los usuarios reciben feedback visual de su interacción como si de una pantalla se tratase.
+**Versión para navegador.** El fuego es una secuencia de 271 cuadros guardada en dos hojas de imágenes: una máscara que quema el libro y el brillo de las brasas. Cada carácter escrito hace retroceder el fuego en proporción a los caracteres que faltan, así el fuego llega al inicio justo cuando se alcanza el objetivo. Las páginas salvadas se firman y quedan sobre una mesa, guardadas solo en el navegador de quien juega.
 
-Se implementó la Librería de video para reproducir en la superficie del libro un video de llamas que simulan que la superficie se está quemando.
-El video avanza o retrocede su reproducción dependiendo de la interacción del usuario.
+**Instalación original.** Se implementó la librería de mapping para realizar una proyección sobre la superficie de un libro, así los usuarios recibían feedback visual de su interacción como si de una pantalla se tratase. La librería de video reproducía sobre el libro un video de llamas que avanzaba o retrocedía según la interacción del usuario.
+
+## Tecnologías
+
+Versión para navegador:
+- JavaScript
+- p5.js 1.11
+- Web Audio API
+
+Instalación original:
+- Lenguaje Java
+- Processing 4.5 (hecho originalmente con 3.5.4)
+- Librería de mapping Keystone (David Bouchard)
+- Librería de Video para Processing 4 (originalmente la versión para Processing 3, The Processing Foundation)
 
 ## Galería de imágenes
 
@@ -51,13 +48,18 @@ El video avanza o retrocede su reproducción dependiendo de la interacción del 
 ![Un usuario escribiendo sobre las páginas proyectadas](Gallery/TheLibrary_02_Writing.png)
 ![El libro quemándose](Gallery/TheLibrary_03_Burning.png)
 ![El libro quemándose](Gallery/TheLibrary_04_Burning.png)
+![La sala con la computadora](Gallery/TheLibrary_08_Room.jpg)
+![El proyector en el piso apuntando al libro](Gallery/TheLibrary_10_Projector.jpg)
+
+Más fotos en la [galería](Gallery).
 
 ## Créditos y links
 
 Los videos e imágenes utilizados fueron proporcionados por colaboradores encargados de otras áreas de realización del proyecto.
-- La tipografía utilizada es [“The Queen”](https://fontbundles.net/free-fonts/the-queen) de Font Bundles, gratuita para uso personal y comercial. Su licencia no permite compartir el archivo de la fuente, por eso no está incluida en este repositorio.
+- La tipografía utilizada es [“The Queen”](https://fontbundles.net/free-fonts/regular-fonts/the-queen) de Font Bundles, con su licencia Premium. La licencia permite usarla como web font pero no compartir el archivo de la fuente, por eso no está incluida en este repositorio.
 
 ## Cambios realizados
 
-- Se agregaron comentarios y pestañas.  
+- Se agregó una versión para navegador en p5.js.
+- Se agregaron comentarios y pestañas.
 - Se mejoraron los nombres de variables y su jerarquía.

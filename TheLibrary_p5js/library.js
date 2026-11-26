@@ -8,6 +8,7 @@ let tableView = 0;
 let slipImages = [];
 const slipSize = { w: 310, h: 174 };
 const slipColumns = 4;
+const tableSpacing = 1610; // neighbor tables peek at the screen edges
 
 
 function loadLibrary() {
@@ -40,7 +41,7 @@ function slipPosition(i) {
   let col = (i % slipsPerTable) % slipColumns;
   let row = floor((i % slipsPerTable) / slipColumns);
   return {
-    x: 405 + col * 370 + slip.jitterX + (table - tableView) * 1920,
+    x: 405 + col * 370 + slip.jitterX + (table - tableView) * tableSpacing,
     y: 230 + row * 250 + slip.jitterY
   };
 }
@@ -50,42 +51,14 @@ function tableCount() {
 }
 
 function changeTable(direction) {
-  tableIndex = constrain(tableIndex + direction, 0, tableCount() - 1);
-}
-
-function drawTableNavigation() {
-  tableView = lerp(tableView, tableIndex, 0.12);
-  if (abs(tableView - tableIndex) < 0.001) tableView = tableIndex;
-  if (tableCount() < 2) return;
-
-  if (tableIndex > 0) drawArrow(90, -1);
-  if (tableIndex < tableCount() - 1) drawArrow(1830, 1);
-
-  noStroke();
-  for (let i = 0; i < tableCount(); i++) {
-    fill(paperColor[0], paperColor[1], paperColor[2], i == tableIndex ? 240 : 140);
-    circle(960 + (i - (tableCount() - 1) / 2) * 28, 935, 12);
-  }
-}
-
-function drawArrow(x, direction) {
-  let y = 520;
-  let mx = mouseX / screenScale;
-  let my = mouseY / screenScale;
-  let hover = abs(mx - x) < 50 && abs(my - y) < 70;
-  if (hover && openedPage < 0) cursor(HAND);
-
-  noFill();
-  stroke(paperColor[0], paperColor[1], paperColor[2], hover ? 255 : 210);
-  strokeWeight(5);
-  line(x - 14 * direction, y - 36, x + 14 * direction, y);
-  line(x + 14 * direction, y, x - 14 * direction, y + 36);
-  noStroke();
-
-  buttons.push({ x: x, y: y, w: 100, h: 140, action: () => changeTable(direction) });
+  let next = constrain(tableIndex + direction, 0, tableCount() - 1);
+  if (next != tableIndex) playSound("papers", 0.4, 1.1);
+  tableIndex = next;
 }
 
 function drawLibrary() {
+  tableView = lerp(tableView, tableIndex, 0.12);
+  if (abs(tableView - tableIndex) < 0.001) tableView = tableIndex;
   image(tableImage, 0, 0, 1920, 1080);
   let hovered = slipUnderMouse();
 
@@ -99,7 +72,7 @@ function drawLibrary() {
     if (i == hovered && openedPage < 0) scale(1.06);
 
     let img = slipImages[(slip.sprite ?? i) % slipImages.length];
-    if (i == library.length - 1 && !returnToBook) drawingContext.shadowColor = "rgba(255, 150, 40, " + (0.6 + 0.3 * sin(millis() * 0.004)) + ")";
+    if (i == library.length - 1 && !returnToBook) drawingContext.shadowColor = "rgba(240, 90, 38, " + (0.6 + 0.3 * sin(millis() * 0.004)) + ")";
     else drawingContext.shadowColor = "rgba(0, 0, 0, 0.6)";
     drawingContext.shadowBlur = 18;
     drawingContext.shadowOffsetY = 6;
@@ -125,7 +98,7 @@ function drawLibrary() {
 }
 
 function slipText(slip) {
-  return slip.text || (slip.lines || []).join(" ");
+  return slip.text || "";
 }
 
 function slipUnderMouse() {
@@ -175,7 +148,7 @@ function drawOpenedPage() {
   }
   textSize(30);
   textAlign(RIGHT, TOP);
-  text(slip.name || "", 330, 150);
+  text("— " + (slip.name || ""), 330, 150);
   pop();
 
   fill(paperColor[0], paperColor[1], paperColor[2], 230);
@@ -188,11 +161,17 @@ function drawOpenedPage() {
 function libraryClick() {
   if (openedPage >= 0) {
     openedPage = -1;
+    playSound("paper", 0.4, 1.1);
     return true;
   }
   let slip = slipUnderMouse();
   if (slip >= 0) {
-    openedPage = slip;
+    let table = floor(slip / slipsPerTable);
+    if (table != tableIndex) changeTable(table > tableIndex ? 1 : -1);
+    else {
+      openedPage = slip;
+      playSound("paper", 0.7);
+    }
     return true;
   }
   return false;

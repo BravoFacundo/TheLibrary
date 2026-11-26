@@ -36,6 +36,7 @@ let typedLetters = [];
 const letterFade = 800;
 let winTime = 0;
 let fadeTime = -10000;
+let settleTime = -10000;
 
 
 //----- Design
@@ -52,36 +53,34 @@ lang = lang.startsWith("es") ? "es" : "en";
 let returnToBook = false;
 const texts = {
   en: {
-    loading: "Loading...",
     start: "Type to save the book",
     focus: "Click to start writing",
     keyboard: "You need a keyboard to write",
-    sign: "Sign your page and press Enter",
+    safe: "The book is safe",
+    sign: "Sign the page and press Enter",
     signature: "Signature",
     anonymous: "Anonymous",
-    saved: "You saved the book",
-    entries: "View entries",
-    back: "Back to the book",
+    saved: "Page saved",
+    entries: "View saved pages",
     library: "Pages saved from the fire",
-    libraryInfo: "They are kept only in this browser. Click one to read it.",
+    libraryInfo: "Click on them to read them",
     close: "Click to close",
     again: "Write again"
   },
   es: {
-    loading: "Cargando...",
     start: "Escribí para salvar el libro",
     focus: "Hacé click para escribir",
     keyboard: "Necesitás un teclado para escribir",
-    sign: "Firmá tu página y apretá Enter",
+    safe: "El libro está a salvo",
+    sign: "Firmá la página y apretá Enter",
     signature: "Firma",
     anonymous: "Anónimo",
-    saved: "Salvaste el libro",
-    entries: "Ver entradas",
-    back: "Volver al libro",
+    saved: "Página guardada",
+    entries: "Ver páginas guardadas",
     library: "Páginas que se salvaron del fuego",
-    libraryInfo: "Se guardan solo en este navegador. Hacé click en una para leerla.",
+    libraryInfo: "Hacé click en ellas para leerlas",
     close: "Click para cerrar",
-    again: "Escribir de nuevo"
+    again: "Volver a escribir"
   }
 };
 
@@ -92,8 +91,8 @@ function preload() {
   logos.en = loadImage("data/Logo_EN.png");
   bookImage = loadImage("data/Book.webp");
   burnedImage = loadImage("data/Book_Burned.webp");
-  for (let i = 1; i <= 4; i++) slipImages.push(loadImage("data/Slip_" + i + ".webp"));
   tableImage = loadImage("data/Table.jpg");
+  loadUI();
 }
 
 function savedLanguage() {
@@ -112,12 +111,15 @@ function setup() {
   window.focus();
 
   createBook();
+  // Loaded after the book is on screen: only needed later
+  video.loadGlow();
+  for (let i = 1; i <= 4; i++) slipImages.push(loadImage("data/Slip_" + i + ".webp"));
+  loadSounds();
   loadLibrary();
   textFont("Georgia");
   loadFont("data/TheQueen.ttf", f => textFont(f), () => {});
   clearText();
   fadeTime = millis(); // fade in from the black loading screen
-  video.setSpeed(videoSpeed);
 }
 
 function draw() {
@@ -132,7 +134,11 @@ function draw() {
     else videoSpeed = 1;
     if (millis() - lastKeyPressed > 400) video.finishRewind();
 
-    if (video.currentFrame < 3 && countCharacters() >= charactersToWin) bookSaved = true;
+    if (!bookSaved && video.currentFrame < 3 && countCharacters() >= charactersToWin) {
+      bookSaved = true;
+      settleTime = millis();
+      playSound("fireStop", 0.8);
+    }
     let wordFinished = endOfWord() || bookFull() || millis() - lastKeyPressed > 1000;
     if (bookSaved && wordFinished) win();
   }
@@ -144,16 +150,13 @@ function draw() {
     restart(gameState != "Playing");
   }
 
+  updateSound();
   scale(screenScale);
   cursor(ARROW);
   if (gameState == "Library") drawLibrary();
   else drawBook();
-  drawShade();
-  uiShadow(true);
   drawStatus();
-  if (gameState == "Library") drawTableNavigation();
   drawLanguage();
-  uiShadow(false);
   drawOpenedPage();
   drawFade();
 }
