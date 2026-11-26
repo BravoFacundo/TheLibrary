@@ -41,6 +41,7 @@ let settleTime = -10000;
 
 //----- Design
 let logos = {};
+let pagesData;
 const paperColor = [232, 223, 176];
 const inkColor = [34, 26, 20];
 
@@ -93,6 +94,7 @@ function preload() {
   burnedImage = loadImage("data/Book_Burned.webp");
   tableImage = loadImage("data/Table.jpg");
   loadUI();
+  pagesData = loadJSON("data/pages.json");
 }
 
 function savedLanguage() {
@@ -115,7 +117,7 @@ function setup() {
   video.loadGlow();
   for (let i = 1; i <= 4; i++) slipImages.push(loadImage("data/Slip_" + i + ".webp"));
   loadSounds();
-  loadLibrary();
+  loadLibrary(pagesData);
   textFont("Georgia");
   loadFont("data/TheQueen.ttf", f => textFont(f), () => {});
   clearText();

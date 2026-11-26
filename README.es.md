@@ -44,12 +44,22 @@ Instalación original:
 
 ## Galería de imágenes
 
+### Versión para navegador
+
+![El libro quemándose, esperando que alguien escriba](Gallery/TheLibrary_Web_01_Burning_ES.jpg)
+![Escribir hace retroceder el fuego](Gallery/TheLibrary_Web_02_Writing_ES.jpg)
+![El libro está a salvo: firmando la página](Gallery/TheLibrary_Web_03_Sign_ES.jpg)
+![La mesa con las páginas que se salvaron del fuego](Gallery/TheLibrary_Web_04_Library_ES.jpg)
+![Leyendo una página guardada](Gallery/TheLibrary_Web_05_Reading_ES.jpg)
+
+### Instalación original
+
 ![El libro esperando al próximo usuario](Gallery/TheLibrary_01_Book.png)
 ![Un usuario escribiendo sobre las páginas proyectadas](Gallery/TheLibrary_02_Writing.png)
 ![El libro quemándose](Gallery/TheLibrary_03_Burning.png)
 ![El libro quemándose](Gallery/TheLibrary_04_Burning.png)
-![La sala con la computadora](Gallery/TheLibrary_08_Room.jpg)
-![El proyector en el piso apuntando al libro](Gallery/TheLibrary_10_Projector.jpg)
+![La mesa con el libro, vista de frente](Gallery/TheLibrary_07_Table_Wide.jpg)
+![La sala con la computadora](Gallery/TheLibrary_08_Room_Wide.jpg)
 
 Más fotos en la [galería](Gallery).
 

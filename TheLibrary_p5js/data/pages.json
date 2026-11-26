@@ -1,0 +1,44 @@
+{
+  "pages": [
+    {
+      "text": {
+        "es": "Hubo una vez una biblioteca perdida en el tiempo y el espacio. Si por azar la encontrabas y te llevabas un libro, el libro empezaba a arder para proteger lo que sabía. Solo escribiendo en sus páginas, con el poder de la palabra, se podía salvar ese saber.",
+        "en": "Once upon a time there was a library lost in time and space. If by chance you found it and took one of its books away, the book began to burn to protect what it knew. Only by writing on its pages, with the power of words, could all that knowledge be saved."
+      },
+      "name": { "es": "El bibliotecario", "en": "The librarian" },
+      "jitterX": -20, "jitterY": 10, "angle": -0.06, "sprite": 1
+    },
+    {
+      "text": {
+        "es": "Encontré la biblioteca de casualidad. Cuando el libro empezó a arder, escribí lo único que sabía de memoria.",
+        "en": "I found the library by chance. When the book started to burn, I wrote the only thing I knew by heart."
+      },
+      "name": { "es": "Una visitante", "en": "A visitor" },
+      "jitterX": 30, "jitterY": -20, "angle": 0.09, "sprite": 0
+    },
+    {
+      "text": {
+        "es": "Lo que se escribe acá no se pierde: pasa de mano en mano, de página en página.",
+        "en": "What is written here is not lost: it passes from hand to hand, from page to page."
+      },
+      "name": { "es": "Anónimo", "en": "Anonymous" },
+      "jitterX": -35, "jitterY": 25, "angle": -0.12, "sprite": 2
+    },
+    {
+      "text": {
+        "es": "Dicen que la biblioteca aparece solo por un rato. Dejo esto por si vuelve.",
+        "en": "They say the library only appears for a while. I leave this in case it comes back."
+      },
+      "name": { "es": "Un viajero", "en": "A traveler" },
+      "jitterX": 15, "jitterY": -5, "angle": 0.04, "sprite": 3
+    },
+    {
+      "text": {
+        "es": "El fuego no odia a los libros: los protege de quien no los quiere leer.",
+        "en": "The fire does not hate books: it protects them from those who won't read them."
+      },
+      "name": { "es": "Anónimo", "en": "Anonymous" },
+      "jitterX": -10, "jitterY": 20, "angle": 0.14, "sprite": 1
+    }
+  ]
+}

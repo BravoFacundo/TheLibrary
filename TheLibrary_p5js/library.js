@@ -1,4 +1,5 @@
 let library = [];
+let examplePages = []; // shipped with the game, in data/pages.json
 let openedPage = -1;
 const libraryKey = "theLibrary.pages";
 const maxPages = 60;
@@ -11,12 +12,14 @@ const slipColumns = 4;
 const tableSpacing = 1610; // neighbor tables peek at the screen edges
 
 
-function loadLibrary() {
+// The library shows the example pages first, then the ones saved in this browser
+function loadLibrary(examples) {
+  examplePages = examples.pages || [];
+  let saved = [];
   try {
-    library = JSON.parse(localStorage.getItem(libraryKey)) || [];
-  } catch (e) {
-    library = [];
-  }
+    saved = JSON.parse(localStorage.getItem(libraryKey)) || [];
+  } catch (e) {}
+  library = examplePages.concat(saved);
 }
 
 function saveToLibrary() {
@@ -28,10 +31,11 @@ function saveToLibrary() {
     angle: random(-0.18, 0.18),
     sprite: floor(random(slipImages.length))
   });
-  if (library.length > maxPages) library.shift();
+  let saved = library.slice(examplePages.length);
+  if (saved.length > maxPages) library.splice(examplePages.length, 1);
 
   try {
-    localStorage.setItem(libraryKey, JSON.stringify(library));
+    localStorage.setItem(libraryKey, JSON.stringify(library.slice(examplePages.length)));
   } catch (e) {}
 }
 
@@ -90,15 +94,22 @@ function drawLibrary() {
       text(slipLines[j], -slipSize.w / 2 + 46, -slipSize.h / 2 + 40 + j * 15);
     }
     textAlign(RIGHT, TOP);
-    text(slip.name || "", slipSize.w / 2 - 44, slipSize.h / 2 - 48);
+    text(slipName(slip), slipSize.w / 2 - 44, slipSize.h / 2 - 48);
     pop();
   }
 
   if (hovered >= 0 && openedPage < 0) cursor(HAND);
 }
 
+// Example pages have one text per language
 function slipText(slip) {
+  if (typeof slip.text == "object") return slip.text[lang] || "";
   return slip.text || "";
+}
+
+function slipName(slip) {
+  if (typeof slip.name == "object") return slip.name[lang] || "";
+  return slip.name || "";
 }
 
 function slipUnderMouse() {
@@ -148,7 +159,7 @@ function drawOpenedPage() {
   }
   textSize(30);
   textAlign(RIGHT, TOP);
-  text("— " + (slip.name || ""), 330, 150);
+  text("— " + slipName(slip), 330, 150);
   pop();
 
   fill(paperColor[0], paperColor[1], paperColor[2], 230);

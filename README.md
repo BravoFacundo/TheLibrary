@@ -44,12 +44,22 @@ Original installation:
 
 ## Image gallery
 
+### Browser version
+
+![The book burning, waiting for someone to write](Gallery/TheLibrary_Web_01_Burning_EN.jpg)
+![Writing pushes the fire back](Gallery/TheLibrary_Web_02_Writing_EN.jpg)
+![The book is safe: signing the page](Gallery/TheLibrary_Web_03_Sign_EN.jpg)
+![The table with the pages saved from the fire](Gallery/TheLibrary_Web_04_Library_EN.jpg)
+![Reading a saved page](Gallery/TheLibrary_Web_05_Reading_EN.jpg)
+
+### Original installation
+
 ![The book waiting for the next user](Gallery/TheLibrary_01_Book.png)
 ![A user writing on the projected pages](Gallery/TheLibrary_02_Writing.png)
 ![The book burning](Gallery/TheLibrary_03_Burning.png)
 ![The book burning](Gallery/TheLibrary_04_Burning.png)
-![The room with the computer](Gallery/TheLibrary_08_Room.jpg)
-![The projector on the floor facing the book](Gallery/TheLibrary_10_Projector.jpg)
+![The table with the book, front view](Gallery/TheLibrary_07_Table_Wide.jpg)
+![The room with the computer](Gallery/TheLibrary_08_Room_Wide.jpg)
 
 More photos in the [gallery](Gallery).
 

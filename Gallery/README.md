@@ -1,6 +1,6 @@
 # The Library — gallery
 
-Photographic record of the installation as it was shown: the projection on the book and people using it, followed by the setup of the room and, to close, throwing the burnt pages.
+Screenshots of the browser version, followed by the photographic record of the installation as it was shown: the projection on the book and people using it, followed by the setup of the room and, to close, throwing the burnt pages. The image was projected from the classroom's ceiling projector.
 
 ## Banners
 
@@ -12,7 +12,41 @@ Photographic record of the installation as it was shown: the projection on the b
 
 `TheLibrary_Banner_ES.png` — Logo banner, Spanish (original)
 
-## Photos
+## Browser version
+
+Screenshots of the p5.js version, in English and Spanish (`_EN` / `_ES`).
+
+### The book burning, waiting for someone to write
+
+![The book burning, waiting for someone to write](TheLibrary_Web_01_Burning_EN.jpg)
+
+`TheLibrary_Web_01_Burning_EN.jpg` · `TheLibrary_Web_01_Burning_ES.jpg`
+
+### Writing pushes the fire back
+
+![Writing pushes the fire back](TheLibrary_Web_02_Writing_EN.jpg)
+
+`TheLibrary_Web_02_Writing_EN.jpg` · `TheLibrary_Web_02_Writing_ES.jpg`
+
+### The book is safe: signing the page
+
+![The book is safe: signing the page](TheLibrary_Web_03_Sign_EN.jpg)
+
+`TheLibrary_Web_03_Sign_EN.jpg` · `TheLibrary_Web_03_Sign_ES.jpg`
+
+### The table with the pages saved from the fire
+
+![The table with the pages saved from the fire](TheLibrary_Web_04_Library_EN.jpg)
+
+`TheLibrary_Web_04_Library_EN.jpg` · `TheLibrary_Web_04_Library_ES.jpg`
+
+### Reading a saved page
+
+![Reading a saved page](TheLibrary_Web_05_Reading_EN.jpg)
+
+`TheLibrary_Web_05_Reading_EN.jpg` · `TheLibrary_Web_05_Reading_ES.jpg`
+
+## Installation photos
 
 ### The book waiting for the next user
 
@@ -62,15 +96,15 @@ Photographic record of the installation as it was shown: the projection on the b
 
 `TheLibrary_09_Room.jpg`
 
-### Setup: the projector on the floor facing the book
+### Setup: the room from the back corner
 
-![Setup: the projector on the floor facing the book](TheLibrary_10_Projector.jpg)
+![Setup: the room from the back corner](TheLibrary_10_Projector.jpg)
 
 `TheLibrary_10_Projector.jpg`
 
-### Setup: the projector and the room from the corner
+### Setup: the table and the whiteboard from the back corner
 
-![Setup: the projector and the room from the corner](TheLibrary_11_Projector.jpg)
+![Setup: the table and the whiteboard from the back corner](TheLibrary_11_Projector.jpg)
 
 `TheLibrary_11_Projector.jpg`
 
